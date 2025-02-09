@@ -1,0 +1,372 @@
+/* ============================= */
+/* -------- General CSS -------- */
+/* ============================= */
+
+body {
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background: #ffffff;
+}
+
+a {
+    color: #AF9483;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #666666;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Solway', serif;
+    color: #666666;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #AF9483;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #ffffff;
+}
+
+
+
+/* ============================= */
+/* ------ Top Header CSS ------- */
+/* ============================= */
+
+.top-header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.top-header:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) left top repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: -1;
+}
+
+.top-header .container {
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.top-header img {
+    height: 200px;
+    margin-bottom: 30px;
+    border: 15px solid rgba(256, 256, 256, .1);
+}
+
+.top-header h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.top-header p {
+    display: none;
+}
+
+.top-header h2 {
+    display: inline-block;
+    margin: 0;
+    height: 40px;
+    font-size: 3vw;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.top-header .typed-cursor {
+    font-size: 3vw;
+}
+
+
+
+/* ============================= */
+/* -------- Header CSS --------- */
+/* ============================= */
+
+.header {
+    background: #AF9483;
+    height: 70px;
+}
+
+.header .logo {
+    margin: 14px 25px 0 0;
+}
+
+.header .logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.header .logo h1 a,
+.header .logo h1 a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+    }
+    
+    .header .logo {
+        margin: 10px 0 0 0;
+    }
+    
+    .header .logo h1 {
+        padding: 2px 0;
+        font-size: 26px;
+    }
+}
+
+.header .social-nav {
+    margin-top: 15px;
+}
+
+.header .social-nav a {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.header .social-nav a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-menu, .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu > li {
+    float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+    display: block;
+}
+
+.nav-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+}
+
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+    content: "\f107";
+    position: absolute;
+    right: 15px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+}
+
+#nav-menu-container {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #nav-menu-container {
+        display: none;
+    }
+}
+
+.nav-menu a {
+    padding: 22px 15px;
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    outline: none;
+}
+
+.nav-menu a:hover,
+.nav-menu li:hover > a,
+.nav-menu .menu-active > a {
+    color: #000000;
+}
+
+.nav-menu ul {
+    margin: 7px 0 0 15px;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+    background: #ffffff;
+    border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+    border-top: 0;
+}
+
+.nav-menu ul li:hover {
+    background: #AF9483;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a {
+    color: #333333;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    padding: 10px 15px;
+}
+
+.nav-menu ul li a:hover {
+    color: #ffffff;
+}
+
+.nav-menu ul ul {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* ============================= */
+/* ------- Header Title -------- */
+/* ============================= */
+
+.section-header h2,
+.section-header h3 {
+    display: inline-block;
+    color: #AF9483;
+    font-size: 35px;
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AF9483;
+}
+
+.section-header h2::before,
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: 0px;
+    right: 0;
+    border-top: 10px solid;
+    border-right: 10px solid;
+    border-color: transparent #AF9483;
+}
+
+.section-header h2::after,
+.section-header h3::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: 0px;
+    left: 0;
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-color: transparent #AF9483;
+}
+
+.section-header p {
+    text-align: left;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 992px) {
+    .section-header p {
+        width: 70%;
+    }
+}
