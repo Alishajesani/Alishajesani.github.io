@@ -239,12 +239,6 @@ h6 {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    #nav-menu-container {
-        display: none;
-    }
-}
-
 .nav-menu a {
     padding: 22px 15px;
     text-decoration: none;
@@ -299,17 +293,6 @@ h6 {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    #mobile-nav-toggle {
-        display: inline;
-    }
-    
-    .logo {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 
 
 /* ============================= */
@@ -362,8 +345,189 @@ h6 {
     padding-bottom: 0px;
 }
 
-@media (min-width: 992px) {
-    .section-header p {
-        width: 70%;
-    }
+/* ============================= */
+/* ------- About Me CSS -------- */
+/* ============================= */
+
+.about {
+    padding: 60px 0 15px 0;
+    position: relative;
+    text-align: left;
 }
+
+.about .row {
+    margin-bottom: 30px;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.about h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.about a {
+    display: inline-block;
+    padding: 6px 20px;
+    color: #AF9483;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid #AF9483;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 30px;
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 5px;
+}
+.tab-links:hover {
+    color: #AF9483; /* Muted Coral on hover */
+    transform: scale(1.1); /* Slight enlargement */
+    border-bottom: 2px solid #AF9483; /* Underline in Muted Coral */
+}
+
+/* Active Tab Effect */
+.active-link {
+    color:#AF9483 ; /* Make the active tab Muted Coral */
+    border-bottom: 2px solid #666666; /* Underline in Muted Coral */
+}
+.tab-links::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #AF9483;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50;
+    left: 0;
+}
+.tab-content ul li {
+    margin-bottom: 10px;
+}
+.tab-content ul li span {
+    font-weight: 700;
+    color: #666666;
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content.active-tab {
+    display: block;
+}
+
+t
+
+.about a:hover {
+    color: #ffffff;
+    background: #AF9483;
+    ;
+}
+
+.about .skills h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.about .skill-name{
+    position: relative;
+    width: 100%;
+}
+
+.about .skill-name p{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about .skill-name p:last-child{
+    float: right;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.skills {
+    width: 100%;
+    max-width: 500px; /* Keeps skills sections aligned */
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Ensures both sections are aligned */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between; /* Keeps text and percentage in line */
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-container {
+    width: 100%;
+}
+
+.progress {
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #AF9483;
+    text-align: right;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    padding-right: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
