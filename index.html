@@ -188,6 +188,101 @@
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+        <script>
+            function opentab(tabname) {
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-content");
+        
+                // Remove active classes from all tabs and hide all content
+                for (var tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+        
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+        
+                // Add active class to the clicked tab and show its content
+                document.getElementById(tabname).classList.add("active-tab");
+                event.currentTarget.classList.add("active-link");
+        
+                // Restart progress bar animation if 'skills' tab is clicked
+                if (tabname === "skills") {
+                    let progressBars = document.querySelectorAll("#skills .progress-bar");
+                    progressBars.forEach((bar) => {
+                        let width = bar.getAttribute("data-percent"); // Get target percentage
+                        bar.style.width = "0"; // Reset width
+        
+                        setTimeout(() => {
+                            animateProgressBar(bar, width);
+                        }, 0.007); // Small delay before starting animation
+                    });
+                }
+            }
+        
+            // Function to animate progress bars
+            function animateProgressBar(bar, targetWidth) {
+                let current = 0;
+                let target = parseInt(targetWidth);
+                let interval = setInterval(() => {
+                    if (current >= target) {
+                        clearInterval(interval); // Stop at target percentage
+                        bar.style.width = target + "%"; // Ensure final width is set
+                    } else {
+                        bar.style.width = current + "%"; // Update bar width
+                        current += 2; // Increase progress smoothly
+                    }
+                }, 10); // Faster interval for smoother animation
+            }
+        
+            // Ensure Progress Bar Animates on Page Load if Skills Tab is Active
+            document.addEventListener("DOMContentLoaded", function () {
+                if (document.getElementById("skills").classList.contains("active-tab")) {
+                    let progressBars = document.querySelectorAll("#skills .progress-bar");
+                    progressBars.forEach((bar) => {
+                        let width = bar.getAttribute("data-percent");
+                        animateProgressBar(bar, width);
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const progressBars = document.querySelectorAll(".progress-bar");
+                const skillsSection = document.getElementById("skills-section"); // ID of your skills section
+
+                function animateProgressBars() {
+                    progressBars.forEach(bar => {
+                        let targetPercent = parseInt(bar.getAttribute("data-percent"));
+                        let currentPercent = 0;
+
+                        // Reset width to 0 for animation replay
+                        bar.style.width = "0%";
+                        bar.textContent = "0%";
+
+                        setTimeout(() => {
+                            let interval = setInterval(() => {
+                                if (currentPercent >= targetPercent) {
+                                    clearInterval(interval);
+                                } else {
+                                    currentPercent++;
+                                    bar.style.width = currentPercent + "%";
+                                    bar.textContent = currentPercent + "%";
+                                }
+                            }, 15); // Adjust speed (lower = faster)
+                        }, 300); // Delay to ensure reset effect
+                    });
+                }
+
+                // Add event listener to trigger animation when clicking the skills section
+                skillsSection.addEventListener("click", animateProgressBars);
+            });
+            
+
+
+
+
+        </script>
+
         <!-- Template Javascript -->
         <script src="script.js"></script>
 
