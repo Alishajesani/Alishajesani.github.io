@@ -92,5 +92,127 @@
         items: 1
     });
 
+    //progress bar 
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress-bar");
+    
+        progressBars.forEach(bar => {
+            const percentage = bar.getAttribute("data-percent");
+            bar.style.width = percentage + "%";
+            bar.textContent = percentage + "%"; // Display percentage inside the bar
+        });
+    });
+    
+    // Toggle the experience details based on the clicked section
+    document.getElementById('current-work').addEventListener('click', function() {
+        document.getElementById('current-work-details').classList.add('active');
+        document.getElementById('volunteering-details').classList.remove('active');
+    });
+
+    document.getElementById('volunteering').addEventListener('click', function() {
+        document.getElementById('volunteering-details').classList.add('active');
+        document.getElementById('current-work-details').classList.remove('active');
+    });
+
+    function showExperienceDetails(id) {
+        // Blur background
+        document.querySelector('.experience-boxes').classList.add('blur');
+        
+        // Show popup
+        document.getElementById(id).classList.add('active');
+    }
+
+    function closeExperienceDetails() {
+        // Remove blur effect
+        document.querySelector('.experience-boxes').classList.remove('blur');
+        
+        // Hide all popups
+        document.querySelectorAll('.experience-popup').forEach(popup => {
+            popup.classList.remove('active');
+        });
+    }
+    
+    document.addEventListener("click", function (event) {
+        if (event.target.closest(".popup")) return;
+        let popups = document.querySelectorAll(".popup.active");
+        for (let popup of popups) {
+            popup.classList.remove("active");
+        }
+    });
+
+    
+    function opentab(tabname) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        // Remove active classes from all tabs and hide all content
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        for (var tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        // Add active class to the clicked tab and show its content
+        document.getElementById(tabname).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+
+        // Restart progress bar animation if 'skills' tab is clicked
+        if (tabname === "skills") {
+            let progressBars = document.querySelectorAll("#skills .progress-bar");
+            progressBars.forEach((bar) => {
+                let width = bar.getAttribute("data-percent"); // Get target percentage
+                bar.style.width = "0"; // Reset width
+
+                setTimeout(() => {
+                    animateProgressBar(bar, width);
+                }, 200); // Small delay before starting animation
+            });
+        }
+
+        
+    }
+
+    // Function to animate progress bars
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress-bar");
+    
+        progressBars.forEach(bar => {
+            let targetPercent = parseInt(bar.getAttribute("data-percent"));
+            let currentPercent = 0;
+    
+            // Reset width to 0 for animation to replay when revisiting the page
+            bar.style.width = "0%";
+            bar.textContent = "0%";
+    
+            setTimeout(() => {
+                let interval = setInterval(() => {
+                    if (currentPercent >= targetPercent) {
+                        clearInterval(interval);
+                    } else {
+                        currentPercent++;
+                        bar.style.width = currentPercent + "%";
+                        bar.textContent = currentPercent + "%";
+                    }
+                }, 20); // Adjust speed (lower = faster)
+            }, 500); // Delay to ensure reset effect
+        });
+    });
+    
+
+    // Ensure Progress Bar Animates on Page Load if Skills Tab is Active
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("skills").classList.contains("active-tab")) {
+            let progressBars = document.querySelectorAll("#skills .progress-bar");
+            progressBars.forEach((bar) => {
+                let width = bar.getAttribute("data-percent");
+                animateProgressBar(bar, width);
+            });
+        }
+    });
+
+
+
 })(jQuery);
 
