@@ -70,20 +70,18 @@ h6 {
 
 .top-header {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
     text-align: center;
-    height: 100vh; 
-    background-size: cover;
-    width: 100%;
-    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; 
-    position: relative; 
+    height: 100vh; /* Full viewport height */
+    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; /* Keeps background image */
+    position: relative; /* Ensure elements are positioned properly */
 }
 
 /* Ensure Content is Centered */
 .top-header .container {
     position: relative;
-    z-index: 2; 
+    z-index: 2; /* Ensures text is above background */
 }
 
 /* Header Title */
@@ -109,17 +107,18 @@ h6 {
     position: absolute;
     width: 100%;
     height: 100%;
-    posiyion: absolute;
+    left: 0;
+    top: 0;
     background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) left top repeat;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(8px);
-    z-index: -4;
+    z-index: -1;
 }
+
+
 .top-header img {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
+    height: 200px;
     margin-bottom: 30px;
     border: 15px solid rgba(256, 256, 256, .1);
 }
@@ -166,21 +165,6 @@ h6 {
 .header .logo h1 a,
 .header .logo h1 a:hover {
     color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: 50px;
-    }
-    
-    .header .logo {
-        margin: 10px 0 0 0;
-    }
-    
-    .header .logo h1 {
-        padding: 2px 0;
-        font-size: 26px;
-    }
 }
 
 .header .social-nav {
@@ -255,6 +239,12 @@ h6 {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    #nav-menu-container {
+        display: none;
+    }
+}
+
 .nav-menu a {
     padding: 22px 15px;
     text-decoration: none;
@@ -309,6 +299,17 @@ h6 {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 
 /* ============================= */
@@ -361,6 +362,11 @@ h6 {
     padding-bottom: 0px;
 }
 
+@media (min-width: 992px) {
+    .section-header p {
+        width: 70%;
+    }
+}
 /* ============================= */
 /* ------- About Me CSS -------- */
 /* ============================= */
@@ -420,17 +426,16 @@ h6 {
     border-radius: 5px;
 }
 .tab-links:hover {
-    color: #AF9483; 
-    transform: scale(1.1); 
-    border-bottom: 2px solid #AF9483; 
+    color: #AF9483; /* Muted Coral on hover */
+    transform: scale(1.1); /* Slight enlargement */
+    border-bottom: 2px solid #AF9483; /* Underline in Muted Coral */
 }
 
 /* Active Tab Effect */
 .active-link {
-    color:#AF9483 ; 
-    border-bottom: 2px solid #666666; 
+    color:#AF9483 ; /* Make the active tab Muted Coral */
+    border-bottom: 2px solid #666666; /* Underline in Muted Coral */
 }
-
 .tab-links::after {
     content: '';
     position: absolute;
@@ -499,25 +504,25 @@ body {
 
 .skills {
     width: 100%;
-    max-width: 500px; 
+    max-width: 500px; /* Keeps skills sections aligned */
     margin: auto;
 }
 
 .row {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Ensures both sections are aligned */
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .col-md-6 {
     flex: 1;
-    min-width: 300px; 
+    min-width: 300px; /* Ensures responsiveness */
 }
 
 .skill-name {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Keeps text and percentage in line */
     align-items: center;
     font-weight: bold;
     margin-bottom: 5px;
@@ -548,6 +553,8 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
+
+
 /* ============================= */
 /* ------- Experience CSS ------ */
 /* ============================= */
@@ -555,7 +562,7 @@ body {
 .experience {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
+    gap: 20px; /* Adds spacing between columns */
     justify-content: space-between;
     padding: 0;
 }
@@ -569,7 +576,7 @@ body {
 
 /* Experience Block Style */
 .exp-column {
-    width: calc(50% - 10px); 
+    width: calc(50% - 10px); /* Makes two columns fit side by side */
     background: #e9ecef;
     padding: 25px 30px;
     border-radius: 5px;
@@ -580,9 +587,9 @@ body {
 
 /* Hover Effect */
 .exp-column:hover {
-    background: #AF9483; 
-    color: #ffffff;
-    transform: translateY(-5px); 
+    background: #AF9483; /* Change this to any contrast color you like */
+    color: #ffffff; /* Change text color to white for readability */
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 /* Ensure text remains visible on hover */
@@ -596,15 +603,15 @@ body {
 /* Experience Date Style */
 .exp-date {
     margin-bottom: 5px;
-    color: #4D4D4D; 
+    color: #4D4D4D; /* Darker color for better contrast */
     font-size: 16px;
-    font-weight: 500; 
+    font-weight: 500; /* Slightly bolder for readability */
     letter-spacing: 2px;
 }
 
 /* Ensure it remains visible on hover */
 .exp-column:hover .exp-date {
-    color: #ffffff; 
+    color: #ffffff; /* White text for better contrast on hover */
 }
 
 /* Experience Company Name */
@@ -623,10 +630,6 @@ body {
     font-weight: 400;
     font-style: italic;
 }
-
- /*===============================*/
-/* ------- education CSS ------- */
-/* ============================= */
 .education-section {
     padding: 60px 0;
     text-align: center;
@@ -714,6 +717,7 @@ body {
 .education-card:hover ul li::before {
     color: white;
 }
+
 
 
 /* ============================= */
@@ -860,6 +864,16 @@ body {
     animation: comingSoonAnimation 1s forwards;
 }
 
+@keyframes comingSoonAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
 /* ============================= */
 /* -------- Resume Page -------- */
 /* ============================= */
@@ -1033,7 +1047,6 @@ body {
     transform: scale(1.05);
 }
 
-
 /* ============================= */
 /* -------- Contact CSS -------- */
 /* ============================= */
@@ -1089,10 +1102,10 @@ body {
 }
 
 .contact .social a:hover i {
-    color: #FFFFFF; 
-    background: #AF9483; 
-    padding: 5px; 
-    border-radius: 50%; 
-    transform: scale(1.1); 
+    color: #FFFFFF; /* White color for icon on hover */
+    background: #AF9483; /* Muted Coral background for icon on hover */
+    padding: 5px; /* Optional: add padding for better visual effect */
+    border-radius: 50%; /* Optional: makes the background a circle */
+    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
