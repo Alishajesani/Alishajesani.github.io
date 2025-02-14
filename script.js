@@ -88,13 +88,7 @@
     });
 
 
-    // Testimonials carousel
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        items: 1
-    });
+    
 
     //progress bar 
     document.addEventListener("DOMContentLoaded", function () {
