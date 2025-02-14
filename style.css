@@ -607,3 +607,94 @@ body {
     font-weight: 400;
     font-style: italic;
 }
+
+ /*===============================*/
+/* ------- education CSS ------- */
+/* ============================= */
+.education-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #AF9483;
+    margin-bottom: 20px;
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.education-card {
+    background: #E9ECEF; /* Soft gray background */
+    padding: 15px;
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, color 0.3s ease-in-out;
+    font-size: 14px;
+    color: #4D4D4D; /* Dark gray text */
+}
+
+/* Hover Effect */
+.education-card:hover {
+    background: #AF9483; /* Theme contrast color */
+    color: white;
+    transform: translateY(-3px);
+}
+
+.education-card h3 {
+    color: #AF9483; /* Contrast color for school name */
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.education-card:hover h3 {
+    color: white;
+}
+
+.education-card p {
+    font-size: 14px;
+    color: #666666; /* Slightly softer color for readability */
+    margin-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.education-card:hover p {
+    color: white;
+}
+
+.education-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-card ul li {
+    font-size: 13px;
+    margin: 3px 0;
+    padding-left: 18px;
+    position: relative;
+    color: #666666;
+    transition: color 0.3s ease-in-out;
+}
+
+.education-card ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: #AF9483; /* Match theme color */
+    transition: color 0.3s ease-in-out;
+}
+
+.education-card:hover ul li,
+.education-card:hover ul li::before {
+    color: white;
+}
