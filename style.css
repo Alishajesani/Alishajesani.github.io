@@ -67,13 +67,40 @@ h6 {
 /* ------ Top Header CSS ------- */
 /* ============================= */
 
+
 .top-header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    color: #ffffff;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; /* Keeps background image */
+    position: relative; /* Ensure elements are positioned properly */
 }
+
+/* Ensure Content is Centered */
+.top-header .container {
+    position: relative;
+    z-index: 2; /* Ensures text is above background */
+}
+
+/* Header Title */
+.top-header h1 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Subtext */
+.top-header p {
+    font-size: 0.1vw;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0;
+}
+
+
 
 .top-header:after {
     content: '';
@@ -89,13 +116,6 @@ h6 {
     z-index: -1;
 }
 
-.top-header .container {
-    position: relative;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-}
 
 .top-header img {
     height: 200px;
@@ -103,15 +123,7 @@ h6 {
     border: 15px solid rgba(256, 256, 256, .1);
 }
 
-.top-header h1 {
-    font-size: 5vw;
-    font-weight: 700;
-    color: #ffffff;
-}
 
-.top-header p {
-    display: none;
-}
 
 .top-header h2 {
     display: inline-block;
@@ -153,21 +165,6 @@ h6 {
 .header .logo h1 a,
 .header .logo h1 a:hover {
     color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: 50px;
-    }
-    
-    .header .logo {
-        margin: 10px 0 0 0;
-    }
-    
-    .header .logo h1 {
-        padding: 2px 0;
-        font-size: 26px;
-    }
 }
 
 .header .social-nav {
