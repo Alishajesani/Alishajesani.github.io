@@ -531,3 +531,78 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
+/* ============================= */
+/* ------- Experience CSS ------ */
+/* ============================= */
+
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between columns */
+    justify-content: space-between;
+    padding: 0;
+}
+
+.experience h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4D4D4D;
+    margin-bottom: 20px;
+}
+
+/* Experience Block Style */
+.exp-column {
+    width: calc(50% - 10px); /* Makes two columns fit side by side */
+    background: #e9ecef;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin: 10px 0; /* Adds margin */
+}
+
+/* Hover Effect */
+.exp-column:hover {
+    background: #AF9483; /* Change this to any contrast color you like */
+    color: #ffffff; /* Change text color to white for readability */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Ensure text remains visible on hover */
+.exp-column:hover .exp-company, 
+.exp-column:hover .exp-designation, 
+.exp-column:hover .exp-detail, 
+.exp-column:hover .exp-date {
+    color: white;
+}
+
+/* Experience Date Style */
+.exp-date {
+    margin-bottom: 5px;
+    color: #4D4D4D; /* Darker color for better contrast */
+    font-size: 16px;
+    font-weight: 500; /* Slightly bolder for readability */
+    letter-spacing: 2px;
+}
+
+/* Ensure it remains visible on hover */
+.exp-column:hover .exp-date {
+    color: #ffffff; /* White text for better contrast on hover */
+}
+
+/* Experience Company Name */
+.exp-company {
+    margin-bottom: 5px;
+    color: #AF9483;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Experience Designation */
+.exp-designation {
+    margin-bottom: 10px;
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
