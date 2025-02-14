@@ -843,3 +843,176 @@ body {
     visibility: visible;
     animation: comingSoonAnimation 1s forwards;
 }
+
+/* ============================= */
+/* -------- Resume Page -------- */
+/* ============================= */
+
+.resume {
+    background-color: #ffffff;
+    color: #AF9483;
+    padding: 80px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Resume Header */
+.resume header.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #AF9483;
+}
+/* Ensure Resume Section Matches Other Headings */
+.resume h2,
+.resume h3,
+.resume header.section-header h3 {
+    font-family: 'Solway', serif; /* Match font with About Me & Projects */
+    font-size: 35px; /* Keep size consistent */
+    font-weight: 700; /* Bold heading */
+    color: #AF9483; /* Muted Coral to match */
+    text-transform: capitalize; /* Ensure styling consistency */
+    letter-spacing: 1px; /* Match spacing */
+}
+
+/* Ensure Resume Paragraph Text Matches */
+.resume p,
+.resume ul li {
+    font-family: 'Open Sans', sans-serif; /* Keep body text clean */
+    font-size: 18px;
+    color: #666666;
+}
+
+
+.resume h2 {
+    color: #AF9483; /* Muted Coral */
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.resume h3 {
+    color: #AF9483;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Personal Information */
+.resume .personal-info ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: #666666;
+}
+
+.resume .personal-info li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666666;
+}
+
+.resume .personal-info li strong {
+    font-weight: bold;
+    color: #AF9483; /* Muted Coral */
+}
+
+/* Education Section */
+.resume .education ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume .education li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666666;
+}
+
+.resume .education li strong {
+    font-weight: bold;
+    color: #AF9483; /* Muted Coral */
+}
+
+/* Awards Section */
+.resume .awards ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume .awards li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666666;
+}
+
+.resume .awards li strong {
+    font-weight: bold;
+    color: #AF9483; /* Muted Coral */
+}
+
+/* Work Experience Section */
+.resume .work-experience ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume .work-experience li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666666;
+}
+
+.resume .work-experience li strong {
+    font-weight: bold;
+    color: #AF9483; 
+}
+
+/* Skills Section */
+.resume .resume-skills h3 {
+    font-size: 24px;
+    font-weight: 700; 
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.resume .resume-skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume .resume-skills ul li {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.resume .resume-skills ul li strong {
+    font-weight: bold;
+    color: #AF9483; /* Muted Coral */
+}
+
+/* Download CV Section */
+.download-cv {
+    text-align: center;
+    margin-top: 30px;
+    color: #FFFFFF;
+}
+
+.download-button {
+    background-color: #FFFFFF; 
+    color: #FFFFFF; 
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: 2px solid white;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.download-button:hover {
+    color: #FFFFFF;
+    background-color: #6E5A48; /* Darker shade on hover */
+    transform: scale(1.05);
+}
