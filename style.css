@@ -74,7 +74,7 @@ h6 {
     align-items: center; 
     text-align: center;
     height: 100vh; 
-    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; /* Keeps background image */
+    background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; 
     position: relative; 
 }
 
@@ -1016,3 +1016,67 @@ body {
     background-color: #6E5A48; /* Darker shade on hover */
     transform: scale(1.05);
 }
+
+
+/* ============================= */
+/* -------- Contact CSS -------- */
+/* ============================= */
+
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background: #E9ECEF; /* Soft muted background */
+}
+
+.contact .section-header h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #AF9483;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #4D4D4D;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #AF9483;
+    margin-right: 8px;
+}
+
+.contact-info a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #AF9483;
+}
+/* Contact Me Section */
+.contact .social {
+    margin-top: 15px;
+}
+
+.contact .social a {
+    font-size: 24px;
+    color: #4D4D4D; /* Default icon color */
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block; /* To ensure the hover effect applies correctly */
+}
+
+.contact .social a i {
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contact .social a:hover i {
+    color: #FFFFFF; 
+    background: #AF9483; 
+    padding: 5px; 
+    border-radius: 50%; 
+    transform: scale(1.1); 
+}
+
