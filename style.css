@@ -74,6 +74,8 @@ h6 {
     align-items: center; 
     text-align: center;
     height: 100vh; 
+    background-size: cover;
+    width: 100%;
     background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; 
     position: relative; 
 }
@@ -107,18 +109,17 @@ h6 {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
+    posiyion: absolute;
     background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) left top repeat;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(8px);
-    z-index: -1;
+    z-index: -4;
 }
-
-
 .top-header img {
-    height: 200px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
     margin-bottom: 30px;
     border: 15px solid rgba(256, 256, 256, .1);
 }
@@ -165,6 +166,21 @@ h6 {
 .header .logo h1 a,
 .header .logo h1 a:hover {
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+    }
+    
+    .header .logo {
+        margin: 10px 0 0 0;
+    }
+    
+    .header .logo h1 {
+        padding: 2px 0;
+        font-size: 26px;
+    }
 }
 
 .header .social-nav {
