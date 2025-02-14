@@ -70,7 +70,130 @@
                 
             </div>
         </div>
-        <!--NAV End-->
+        <!--NAV End-->       
+                
+        <!-- About Me Start -->
+        <div class="about" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <img class="img-fluid" src="img/Aliprofile.JPG" />
+                    </div>
+
+                    <div class="col-md-6 col-lg-8">
+                        <header class="section-header">
+                            <h2>About Me</h2>
+                        </header>
+                        <h3><strong>Name:</strong> Alisha Mahebub Jesani</h3>
+                        <h4><strong>Profession:</strong> Undergrad Student</h4>
+                        <p>
+                            I am an undergraduate student at Simon Fraser University studying Computer Science. I am a web developer and a learner. I am passionate about learning new things and exploring new technologies. I am a quick learner and a team player who is always ready to take on new challenges and grow from them.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <div class="row">
+                                        <!-- Front End Skills -->
+                                        <div class="col-md-6">
+                                            <div class="skills">
+                                                <h3>Front End Skills</h3>
+                        
+                                                <div class="skill-name">
+                                                    <p>HTML</p>
+                                                    <p>80%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="80"></div>
+                                                </div>
+                        
+                                                <div class="skill-name">
+                                                    <p>CSS</p>
+                                                    <p>75%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="75"></div>
+                                                </div>
+                        
+                                                <div class="skill-name">
+                                                    <p>jQuery</p>
+                                                    <p>90%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="90"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <!-- Back End Skills -->
+                                        <div class="col-md-6">
+                                            <div class="skills">
+                                                <h3>Back End Skills</h3>
+                        
+                                                <div class="skill-name">
+                                                    <p>Python</p>
+                                                    <p>90%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="90"></div>
+                                                </div>
+                        
+                                                <div class="skill-name">
+                                                    <p>C++</p>
+                                                    <p>85%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="85"></div>
+                                                </div>
+                        
+                                                <div class="skill-name">
+                                                    <p>MySQL</p>
+                                                    <p>80%</p>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar" data-percent="80"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="experience">
+                            <h3>Experience</h3>
+                            <div class="experience">
+                                <!-- First Experience Block -->
+                                <div class="exp-column">
+                                    <p class="exp-date">28-08-2023 <span>to</span> Till Date</p>
+                                    <h4 class="exp-company">Gap, Richmond, BC</h4>
+                                    <h4 class="exp-designation">Brand Associate</h4>
+                                    <p class="exp-detail">
+                                        Working as a brand associate representing customer service. Assisting in stock management, product promotions, and ensuring excellent customer experience.
+                                    </p>
+                                </div>
+                        
+                                <!-- Second Experience Block -->
+                                <div class="exp-column">
+                                    <p class="exp-date">05-06-2023</p>
+                                    <h4 class="exp-company">Volunteering, Burnaby, BC</h4>
+                                    <h4 class="exp-designation">Volunteer for Mentally Abled People</h4>
+                                    <p class="exp-detail">
+                                        Volunteered to do henna for mentally abled elderly people, creating a joyful and engaging experience while spending quality time with them.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- About Me End -->
+        
 
         <!-- Back to Top -->
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -88,6 +211,101 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <script>
+            function opentab(tabname) {
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-content");
+        
+                // Remove active classes from all tabs and hide all content
+                for (var tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+        
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+        
+                // Add active class to the clicked tab and show its content
+                document.getElementById(tabname).classList.add("active-tab");
+                event.currentTarget.classList.add("active-link");
+        
+                // Restart progress bar animation if 'skills' tab is clicked
+                if (tabname === "skills") {
+                    let progressBars = document.querySelectorAll("#skills .progress-bar");
+                    progressBars.forEach((bar) => {
+                        let width = bar.getAttribute("data-percent"); // Get target percentage
+                        bar.style.width = "0"; // Reset width
+        
+                        setTimeout(() => {
+                            animateProgressBar(bar, width);
+                        }, 0.007); // Small delay before starting animation
+                    });
+                }
+            }
+        
+            // Function to animate progress bars
+            function animateProgressBar(bar, targetWidth) {
+                let current = 0;
+                let target = parseInt(targetWidth);
+                let interval = setInterval(() => {
+                    if (current >= target) {
+                        clearInterval(interval); // Stop at target percentage
+                        bar.style.width = target + "%"; // Ensure final width is set
+                    } else {
+                        bar.style.width = current + "%"; // Update bar width
+                        current += 2; // Increase progress smoothly
+                    }
+                }, 10); // Faster interval for smoother animation
+            }
+        
+            // Ensure Progress Bar Animates on Page Load if Skills Tab is Active
+            document.addEventListener("DOMContentLoaded", function () {
+                if (document.getElementById("skills").classList.contains("active-tab")) {
+                    let progressBars = document.querySelectorAll("#skills .progress-bar");
+                    progressBars.forEach((bar) => {
+                        let width = bar.getAttribute("data-percent");
+                        animateProgressBar(bar, width);
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const progressBars = document.querySelectorAll(".progress-bar");
+                const skillsSection = document.getElementById("skills-section"); // ID of your skills section
+
+                function animateProgressBars() {
+                    progressBars.forEach(bar => {
+                        let targetPercent = parseInt(bar.getAttribute("data-percent"));
+                        let currentPercent = 0;
+
+                        // Reset width to 0 for animation replay
+                        bar.style.width = "0%";
+                        bar.textContent = "0%";
+
+                        setTimeout(() => {
+                            let interval = setInterval(() => {
+                                if (currentPercent >= targetPercent) {
+                                    clearInterval(interval);
+                                } else {
+                                    currentPercent++;
+                                    bar.style.width = currentPercent + "%";
+                                    bar.textContent = currentPercent + "%";
+                                }
+                            }, 15); // Adjust speed (lower = faster)
+                        }, 300); // Delay to ensure reset effect
+                    });
+                }
+
+                // Add event listener to trigger animation when clicking the skills section
+                skillsSection.addEventListener("click", animateProgressBars);
+            });
+            
+
+
+
+
+        </script>
 
         <!-- Template Javascript -->
         <script src="script.js"></script>
