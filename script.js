@@ -35,6 +35,10 @@
             }
         }
     });
+    
+    
+    
+    
 
 
     // Stick the header at top on scroll
@@ -214,5 +218,7 @@
 
 
 
-})(jQuery);
+    
+})
+(jQuery);
 
