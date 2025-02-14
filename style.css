@@ -240,11 +240,7 @@ h6 {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    #nav-menu-container {
-        display: none;
-    }
-}
+
 
 .nav-menu a {
     padding: 22px 15px;
@@ -300,17 +296,6 @@ h6 {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    #mobile-nav-toggle {
-        display: inline;
-    }
-    
-    .logo {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 
 
 /* ============================= */
@@ -363,11 +348,7 @@ h6 {
     padding-bottom: 0px;
 }
 
-@media (min-width: 992px) {
-    .section-header p {
-        width: 70%;
-    }
-}
+
 /* ============================= */
 /* ------- About Me CSS -------- */
 /* ============================= */
