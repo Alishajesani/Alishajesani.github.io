@@ -70,18 +70,18 @@ h6 {
 
 .top-header {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     background: url(img/top-view-desk-with-coffee-plant-laptop.jpg) no-repeat center center/cover; /* Keeps background image */
-    position: relative; /* Ensure elements are positioned properly */
+    position: relative; 
 }
 
 /* Ensure Content is Centered */
 .top-header .container {
     position: relative;
-    z-index: 2; /* Ensures text is above background */
+    z-index: 2; 
 }
 
 /* Header Title */
@@ -404,16 +404,17 @@ h6 {
     border-radius: 5px;
 }
 .tab-links:hover {
-    color: #AF9483; /* Muted Coral on hover */
-    transform: scale(1.1); /* Slight enlargement */
-    border-bottom: 2px solid #AF9483; /* Underline in Muted Coral */
+    color: #AF9483; 
+    transform: scale(1.1); 
+    border-bottom: 2px solid #AF9483; 
 }
 
 /* Active Tab Effect */
 .active-link {
-    color:#AF9483 ; /* Make the active tab Muted Coral */
-    border-bottom: 2px solid #666666; /* Underline in Muted Coral */
+    color:#AF9483 ; 
+    border-bottom: 2px solid #666666; 
 }
+
 .tab-links::after {
     content: '';
     position: absolute;
@@ -482,25 +483,25 @@ body {
 
 .skills {
     width: 100%;
-    max-width: 500px; /* Keeps skills sections aligned */
+    max-width: 500px; 
     margin: auto;
 }
 
 .row {
     display: flex;
-    justify-content: space-between; /* Ensures both sections are aligned */
+    justify-content: space-between; 
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .col-md-6 {
     flex: 1;
-    min-width: 300px; /* Ensures responsiveness */
+    min-width: 300px; 
 }
 
 .skill-name {
     display: flex;
-    justify-content: space-between; /* Keeps text and percentage in line */
+    justify-content: space-between; 
     align-items: center;
     font-weight: bold;
     margin-bottom: 5px;
@@ -538,7 +539,7 @@ body {
 .experience {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adds spacing between columns */
+    gap: 20px; 
     justify-content: space-between;
     padding: 0;
 }
@@ -552,7 +553,7 @@ body {
 
 /* Experience Block Style */
 .exp-column {
-    width: calc(50% - 10px); /* Makes two columns fit side by side */
+    width: calc(50% - 10px); 
     background: #e9ecef;
     padding: 25px 30px;
     border-radius: 5px;
@@ -563,9 +564,9 @@ body {
 
 /* Hover Effect */
 .exp-column:hover {
-    background: #AF9483; /* Change this to any contrast color you like */
-    color: #ffffff; /* Change text color to white for readability */
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    background: #AF9483; 
+    color: #ffffff;
+    transform: translateY(-5px); 
 }
 
 /* Ensure text remains visible on hover */
@@ -579,15 +580,15 @@ body {
 /* Experience Date Style */
 .exp-date {
     margin-bottom: 5px;
-    color: #4D4D4D; /* Darker color for better contrast */
+    color: #4D4D4D; 
     font-size: 16px;
-    font-weight: 500; /* Slightly bolder for readability */
+    font-weight: 500; 
     letter-spacing: 2px;
 }
 
 /* Ensure it remains visible on hover */
 .exp-column:hover .exp-date {
-    color: #ffffff; /* White text for better contrast on hover */
+    color: #ffffff; 
 }
 
 /* Experience Company Name */
